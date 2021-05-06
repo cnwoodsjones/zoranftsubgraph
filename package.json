@@ -1,0 +1,16 @@
+{
+  "name": "zoranftsubgraph",
+  "license": "UNLICENSED",
+  "scripts": {
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ cnwoodsjones/zoranftsubgraph",
+    "create-local": "graph create --node http://localhost:8020/ cnwoodsjones/zoranftsubgraph",
+    "remove-local": "graph remove --node http://localhost:8020/ cnwoodsjones/zoranftsubgraph",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 cnwoodsjones/zoranftsubgraph"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-cli": "0.20.0",
+    "@graphprotocol/graph-ts": "0.20.0"
+  }
+}
