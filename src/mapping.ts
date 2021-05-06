@@ -74,6 +74,8 @@ export function handleTransfer(event: TransferEvent): void {
     token = new Token(event.params.tokenId.toString());
     token.creator = event.params.to.toHexString();
     token.tokenID = event.params.tokenId;
+    // Add the createdAtTimestamp to the token object
+    token.createdAtTimestamp = event.block.timestamp;
 
     let tokenContract = TokenContract.bind(event.address);
     token.contentURI = tokenContract.tokenURI(event.params.tokenId);

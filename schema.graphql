@@ -40,6 +40,8 @@ type Token @entity {
   metadataURI: String!
   creator: User!
   owner: User!
+  "Add new createdAtTimesamp field"
+  createdAtTimestamp: BigInt!
 }
 
 type User @entity {

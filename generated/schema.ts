@@ -382,6 +382,15 @@ export class Token extends Entity {
   set owner(value: string) {
     this.set("owner", Value.fromString(value));
   }
+
+  get createdAtTimestamp(): BigInt {
+    let value = this.get("createdAtTimestamp");
+    return value.toBigInt();
+  }
+
+  set createdAtTimestamp(value: BigInt) {
+    this.set("createdAtTimestamp", Value.fromBigInt(value));
+  }
 }
 
 export class User extends Entity {

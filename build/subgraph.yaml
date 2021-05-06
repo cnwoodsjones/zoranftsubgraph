@@ -35,8 +35,4 @@ dataSources:
           handler: handleTokenURIUpdated
         - event: Transfer(indexed address,indexed address,indexed uint256)
           handler: handleTransfer
-        - event: TokenURIUpdated(indexed uint256,address,string)
-          handler: handleTokenURIUpdated
-        - event: Transfer(indexed address,indexed address,indexed uint256)
-          handler: handleTransfer
       file: Token/Token.wasm
